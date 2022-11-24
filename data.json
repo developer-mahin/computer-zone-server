@@ -1,294 +1,231 @@
 [
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
     "category_id": 1,
     "rating": {
       "number": 4.5,
       "badge": "Excellent"
     },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
+    "seller": {
       "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
     },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 16000,
+    "original_price": 32000,
+    "total_view": 488,
+    "years_of_use": "1 Year",
+    "name": "Dell Latitude 3189, Intel Pentium N4200 Processor, 4GB RAM, 128GB SSD, 11.6″ LCD 2-in-1 Touchscreen Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/WgVrVQT/post-Dell-latitude-5285-a.png"
   },
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
     "category_id": 1,
     "rating": {
-      "number": 4.5,
+      "number": 4.7,
       "badge": "Excellent"
     },
+    "seller": {
+      "name": "Mahin Khan",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 29000,
+    "original_price": 67000,
     "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "years_of_use": "7 Month",
+    "name": "Dell Latitude 5285, 7th Gen Core i5, 8GB RAM, 128GB SSD, 12.3″ Touch Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/m5LvwWc/post-Dell-latitude-5285a.png"
   },
+
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
     "category_id": 1,
     "rating": {
-      "number": 4.5,
+      "number": 4.8,
       "badge": "Excellent"
     },
+    "seller": {
+      "name": "John Dane",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 32000,
+    "original_price": 120000,
     "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
-  },
-  {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
-    "category_id": 2,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
-  },
-  {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
-    "category_id": 2,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
-  },
-  {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
-    "category_id": 2,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
-  },
-  {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
-    "category_id": 2,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "years_of_use": "1 Year",
+    "name": "Dell Latitude 5480, Intel Core i5 7th Gen, RAM 8GB DDR4, 256GB SSD Storage, 14″ FHD Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/chYypgM/post-Dell-latitude-5480-a.png"
   },
 
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
+    "category_id": 2,
+    "rating": {
+      "number": 4.5,
+      "badge": "Excellent"
     },
+    "seller": {
+      "name": "Jimmy Dane",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 35000,
+    "original_price": 128000,
+    "total_view": 488,
+    "years_of_use": "9 Month",
+    "name": "HP EliteBook 1040 G4, 7th Gen Core i5 Processor, 8GB RAM, 256GB SSD, 14″ Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/6sP3Hff/post-HP-Elitebook-1040-G4-a-450x450.png"
+  },
+
+  {
+    "category_id": 2,
+    "rating": {
+      "number": 4.5,
+      "badge": "Excellent"
+    },
+    "seller": {
+      "name": "Jimmy Dane",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 25000,
+    "original_price": 75000,
+    "total_view": 488,
+    "years_of_use": "6 Month",
+    "name": "HP EliteBook 745 G4, AMD Pro A10-8730B Processor, 8GB RAM, 256GB SSD, 14″ FHD Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/9HcwZsb/post-HP-Elite-Book-745-G4-a.png"
+  },
+
+  {
+    "category_id": 2,
+    "rating": {
+      "number": 4.9,
+      "badge": "Excellent"
+    },
+    "seller": {
+      "name": "Jimmy Dane",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 12000,
+    "original_price": 12000,
+    "total_view": 488,
+    "years_of_use": "1 Year",
+    "name": "HP EliteBook 745 G5, AMD Ryzen 3 Processor, 8GB RAM, 256GB SSD, 1GB AMD GPU 14″ Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/nPyc7B8/post-HP-Elitebook-745-G5-a.png"
+  },
+
+  {
     "category_id": 3,
     "rating": {
       "number": 4.5,
       "badge": "Excellent"
     },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
+    "seller": {
       "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
     },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 48000,
+    "original_price": 82000,
+    "total_view": 488,
+    "years_of_use": "4 Month",
+    "name": "Lenovo IdeaPad 5 14ITL05, 11th Gen Core i5, 8Gb DDR4 RAM, 512GB SSD Storage, 14” FHD Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/s9fFYK2/post-Lenovo-ideapad-5-14itl05-a.png"
   },
 
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
     "category_id": 3,
     "rating": {
-      "number": 4.5,
+      "number": 4.9,
       "badge": "Excellent"
     },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+    "seller": {
+      "name": "Jimmy Don",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
     },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 16000,
+    "original_price": 42000,
+    "total_view": 488,
+    "years_of_use": "9 Month",
+    "name": "Lenovo ThinkPad L450, 5th Gen Core i3, 8Gb DDR4 RAM, 500Gb HDD, 14“ FHD Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/jfkqSKP/post-Lenovo-Think-Pad-L450-a.png"
   },
 
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
     "category_id": 3,
     "rating": {
-      "number": 4.5,
+      "number": 4.6,
       "badge": "Excellent"
     },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+    "seller": {
+      "name": "Johny",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
     },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 35000,
+    "original_price": 65000,
+    "total_view": 488,
+    "years_of_use": "1 Year",
+    "name": "Lenovo ThinkPad P50, 6th Gen Core i7, 8GB DDR4 RAM, 256GB SSD Storage, 2GB GDDR, 15.6″ FHD Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/Vmd4t9F/post-Lenovo-Thinkpad-p50-a.png"
   },
 
   {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
+    "category_id": 4,
+    "rating": {
+      "number": 4.8,
+      "badge": "Excellent"
     },
+    "seller": {
+      "name": "Jimmy Depp",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka",
+    "resale_price": 20000,
+    "original_price": 56000,
+    "total_view": 488,
+    "years_of_use": "1 Year",
+    "name": "Toshiba DynaBook B374 4th Gen Core i5 Processor, 4GB DDR3 RAM, 500GB HDD, 17.3″ HD LED Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/ZL7GwQY/t.jpg"
+  },
+
+  {
     "category_id": 4,
     "rating": {
       "number": 4.5,
       "badge": "Excellent"
     },
+    "seller": {
+      "name": "Bruce Bee",
+      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+      "verify": true
+    },
+    "location": "Dhaka, Bangladesh",
+    "resale_price": 19000,
+    "original_price": 48000,
     "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
-  },
-
-  {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
-    "category_id": 4,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
-  },
-
-  {
-    "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
-    "others_info": {
-      "is_todays_pick": false,
-      "is_trending": true
-    },
-    "category_id": 4,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "total_view": 488,
-    "title": "Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military Aid Package Yet",
-    "author": {
-      "name": "Jimmy Dane",
-      "published_date": "2022-08-24 17:27:34",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    },
-    "thumbnail_url": "https://i.ibb.co/QnwC4sG/unsplash-Eh-Tc-C9s-YXsw-11.png",
-    "image_url": "https://i.ibb.co/M23fhxm/unsplash-Eh-Tc-C9s-YXsw.png",
-    "details": "Wednesday, August 24, 2022 | Tag Cloud Tags: Biden, EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine, United States, Worthy News (Worthy News) – U.S. President Joe Biden has announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine marked its independence day six months after Russia invaded the country.'The United States of America is committed to supporting the people of Ukraine as they continue the fight to defend their sovereignty. As part of that commitment, I am proud to announce our biggest tranche of security assistance to date: approximately $2."
+    "years_of_use": "1 Year",
+    "name": "Toshiba Portege Z40 4th Gen Core i3, 4GB RAM, 500GB HDD, 14″ Display",
+    "published_date": "2022-11-24 17:27:34",
+    "picture": "https://i.ibb.co/82BJp6x/3-1.png"
   }
 ]
