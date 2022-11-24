@@ -21,6 +21,8 @@ async function run() {
     const usersCollection = client.db("computer-zone").collection("users")
     const categoriesCollection = client.db("computer-zone").collection("categories")
     const productsCollection = client.db("computer-zone").collection("products")
+    const bookingCollection = client.db("computer-zone").collection("bookings")
+
 
     try {
 
@@ -41,8 +43,8 @@ async function run() {
         // get all products by category
         app.get("/category/:id", async (req, res) => {
             const id = req.params.id;
-            const se = parseInt(id)
-            const query = {category_id: se}
+            const convert = parseInt(id)
+            const query = {category_id: convert}
             const products = await productsCollection.find(query).toArray()
             res.send(products)
         })
@@ -54,6 +56,37 @@ async function run() {
             res.send(result)
         })
 
+        // confirm booking 
+        app.post("/booking", async(req,res)=>{
+            const bookData = req.body;
+            const booking = await bookingCollection.insertOne(bookData)
+            res.send(booking)
+        })
+
+        // get specific user
+        app.get("/user/:email", async(req, res)=>{
+            const email = req.params.email;
+            const query = {email: email}
+            const user = await usersCollection.findOne(query)
+            res.send(user)
+        })
+
+        // get booking data for specific user
+        app.get("/bookings", async(req, res)=>{
+
+            const email = req.query.email;
+            const query = {userEmail: email}
+            const bookings = await bookingCollection.find(query).toArray()
+            res.send(bookings)
+
+        })
+
+        // add product by post method
+        app.post("/addProduct", async(req,res)=>{
+            const product = req.body;
+            const result = await productsCollection.insertOne(product)
+            res.send(result)
+        })
     }
     finally {
 

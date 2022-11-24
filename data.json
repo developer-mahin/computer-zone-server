@@ -1,15 +1,10 @@
 [
   {
     "category_id": 1,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Dane",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.5,
+    "seller_name": "Jimmy Dane",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 16000,
     "original_price": 32000,
@@ -21,15 +16,10 @@
   },
   {
     "category_id": 1,
-    "rating": {
-      "number": 4.7,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Mahin Khan",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.7,
+    "seller_name": "Mahin Khan",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 29000,
     "original_price": 67000,
@@ -42,15 +32,10 @@
 
   {
     "category_id": 1,
-    "rating": {
-      "number": 4.8,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "John Dane",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.8,
+    "seller_name": "John Dane",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 32000,
     "original_price": 120000,
@@ -63,15 +48,10 @@
 
   {
     "category_id": 2,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Dane",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.5,
+    "seller_name": "Jimmy Dane",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 35000,
     "original_price": 128000,
@@ -84,15 +64,10 @@
 
   {
     "category_id": 2,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Dane",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.5,
+    "seller_name": "Jimmy Dane",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 25000,
     "original_price": 75000,
@@ -105,15 +80,10 @@
 
   {
     "category_id": 2,
-    "rating": {
-      "number": 4.9,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Dane",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.9,
+    "seller_name": "Jimmy Dane",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 12000,
     "original_price": 12000,
@@ -126,15 +96,10 @@
 
   {
     "category_id": 3,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Dane",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.5,
+    "seller_name": "Jimmy Dane",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 48000,
     "original_price": 82000,
@@ -147,15 +112,10 @@
 
   {
     "category_id": 3,
-    "rating": {
-      "number": 4.9,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Don",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.9,
+    "seller_name": "Jimmy Don",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 16000,
     "original_price": 42000,
@@ -168,15 +128,10 @@
 
   {
     "category_id": 3,
-    "rating": {
-      "number": 4.6,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Johny",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.6,
+    "seller_name": "Johny",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 35000,
     "original_price": 65000,
@@ -189,15 +144,10 @@
 
   {
     "category_id": 4,
-    "rating": {
-      "number": 4.8,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Jimmy Depp",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.8,
+    "seller_name": "Jimmy Depp",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka",
     "resale_price": 20000,
     "original_price": 56000,
@@ -210,15 +160,10 @@
 
   {
     "category_id": 4,
-    "rating": {
-      "number": 4.5,
-      "badge": "Excellent"
-    },
-    "seller": {
-      "name": "Bruce Bee",
-      "img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "verify": true
-    },
+    "rating": 4.5,
+    "seller_name": "Bruce Bee",
+    "seller_img": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
+    "verify": true,
     "location": "Dhaka, Bangladesh",
     "resale_price": 19000,
     "original_price": 48000,
