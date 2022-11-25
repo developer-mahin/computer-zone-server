@@ -103,6 +103,14 @@ async function run() {
             const seller = await usersCollection.find(query).toArray()
             res.send(seller)
         })
+
+        // delete method for deleting buyer and seller
+        app.delete("/deleteAPerson/:id", async(req, res)=>{
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)}
+            const deleteUser = await usersCollection.deleteOne(query);
+            res.send(deleteUser)
+        })
     }
     finally {
 
