@@ -97,9 +97,12 @@ async function run() {
         })
 
         // get booking data for specific user
-        app.get("/bookings", async (req, res) => {
-
+        app.get("/bookings", verifyJwt, async (req, res) => {
             const email = req.query.email;
+            const decodedEmail = req.decoded.email
+            if (email !== decodedEmail) {
+                return res.status(403).send({ message: "Forbidden Access" })
+            }
             const query = { userEmail: email }
             const bookings = await bookingCollection.find(query).toArray()
             res.send(bookings)
@@ -107,14 +110,18 @@ async function run() {
         })
 
         // add product by post method
-        app.post("/addProduct", async (req, res) => {
+        app.post("/addProduct", verifyJwt, async (req, res) => {
             const product = req.body;
             const result = await productsCollection.insertOne(product)
             res.send(result)
         })
 
-        // get seller my product 
-        app.get("/my-product", async (req, res) => {
+        // get my product for seller
+        app.get("/my-product", verifyJwt, async (req, res) => {
+            const decoded = req.decoded
+            if (decoded.email !== req.query.email) {
+                res.status(401).send({ message: "Unauthorized access" })
+            }
             const email = req.query.email;
             const query = { seller_email: email }
             const myProducts = await productsCollection.find(query).toArray()
@@ -122,7 +129,7 @@ async function run() {
         })
 
         // get all seller and buyer account
-        app.get("/myUsers", async (req, res) => {
+        app.get("/myUsers", verifyJwt, async (req, res) => {
             const userRole = req.query.userRole;
             const query = { userRole: userRole }
             const seller = await usersCollection.find(query).toArray()
@@ -130,11 +137,25 @@ async function run() {
         })
 
         // delete method for deleting buyer and seller
-        app.delete("/deleteAPerson/:id", async (req, res) => {
+        app.delete("/deleteAPerson/:id", verifyJwt, async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
             const deleteUser = await usersCollection.deleteOne(query);
             res.send(deleteUser)
+        })
+
+        // patch method for change available to sold 
+        app.patch("/status/:id", verifyJwt, async(req, res)=>{
+            const id = req.params.id
+            const status = req.body.status;
+            const query = {_id: ObjectId(id)}
+            const updatedDoc = {
+                $set: {
+                    status: status
+                }
+            }
+            const result = await productsCollection.updateOne(query, updatedDoc)
+            res.send(result)
         })
     }
     finally {
