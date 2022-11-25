@@ -145,10 +145,10 @@ async function run() {
         })
 
         // patch method for change available to sold 
-        app.patch("/status/:id", verifyJwt, async(req, res)=>{
+        app.patch("/status/:id", verifyJwt, async (req, res) => {
             const id = req.params.id
             const status = req.body.status;
-            const query = {_id: ObjectId(id)}
+            const query = { _id: ObjectId(id) }
             const updatedDoc = {
                 $set: {
                     status: status
@@ -159,12 +159,18 @@ async function run() {
         })
 
         // post method to add product in advertise section 
-        app.post("/advertise", verifyJwt, async(req, res)=>{
+        app.post("/advertise", verifyJwt, async (req, res) => {
             const advertiseProduct = req.body
             const result = await advertisesCollection.insertOne(advertiseProduct)
             res.send(result)
         })
 
+        app.get("/advertise", async (req, res) => {
+            const status = req.query.status;
+            const query = { status: status }
+            const advertises = await advertisesCollection.find(query).toArray()
+            res.send(advertises)
+        })
 
 
     }
