@@ -87,6 +87,14 @@ async function run() {
             const result = await productsCollection.insertOne(product)
             res.send(result)
         })
+
+        // get seller my product 
+        app.get("/my-product", async(req, res)=>{
+            const email = req.query.email;
+            const query = {seller_email: email}
+            const myProducts = await productsCollection.find(query).toArray()
+            res.send(myProducts)
+        })
     }
     finally {
 
