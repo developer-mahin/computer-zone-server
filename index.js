@@ -95,6 +95,14 @@ async function run() {
             const myProducts = await productsCollection.find(query).toArray()
             res.send(myProducts)
         })
+
+        // get all seller and buyer account
+        app.get("/myUsers", async(req, res)=>{
+            const userRole = req.query.userRole;
+            const query = {userRole: userRole}
+            const seller = await usersCollection.find(query).toArray()
+            res.send(seller)
+        })
     }
     finally {
 
