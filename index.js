@@ -37,7 +37,7 @@ async function run() {
     const categoriesCollection = client.db("computer-zone").collection("categories")
     const productsCollection = client.db("computer-zone").collection("products")
     const bookingCollection = client.db("computer-zone").collection("bookings")
-
+    const advertisesCollection = client.db("computer-zone").collection("advertises")
 
     try {
 
@@ -157,6 +157,16 @@ async function run() {
             const result = await productsCollection.updateOne(query, updatedDoc)
             res.send(result)
         })
+
+        // post method to add product in advertise section 
+        app.post("/advertise", verifyJwt, async(req, res)=>{
+            const advertiseProduct = req.body
+            const result = await advertisesCollection.insertOne(advertiseProduct)
+            res.send(result)
+        })
+
+
+
     }
     finally {
 
