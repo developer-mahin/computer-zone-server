@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const jwt = require('jsonwebtoken');
 const cors = require("cors");
 require("dotenv").config()
-const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
 
@@ -13,9 +14,23 @@ app.use(express.json())
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.mfp1c6k.mongodb.net/?retryWrites=true&w=majority`;
-
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
+
+function verifyJwt(req, res, next) {
+    const authHeader = req.headers.authorization;
+    if (!authHeader) {
+        return res.status(401).send({ accessToken: "Unauthorized Access" })
+    }
+    const token = authHeader.split(" ")[1]
+    jwt.verify(token, process.env.JWT_TOKEN, function (err, decoded) {
+        if (err) {
+            return res.status(403).send({ accessToken: "Forbidden Access" })
+        }
+        req.decoded = decoded
+    })
+    next()
+}
 
 async function run() {
     const usersCollection = client.db("computer-zone").collection("users")
@@ -44,70 +59,80 @@ async function run() {
         app.get("/category/:id", async (req, res) => {
             const id = req.params.id;
             const convert = parseInt(id)
-            const query = {category_id: convert}
+            const query = { category_id: convert }
             const products = await productsCollection.find(query).toArray()
             res.send(products)
         })
 
         // get all products
-        app.get("/products", async(req,res)=>{
+        app.get("/products", async (req, res) => {
             const query = {}
             const result = await productsCollection.find(query).toArray()
             res.send(result)
         })
 
+        //get method for jwt token 
+        app.get("/jwt", async (req, res) => {
+            const email = req.query.email
+            const query = { email: email }
+            const user = await usersCollection.findOne(query)
+            const token = jwt.sign(user, process.env.JWT_TOKEN, { expiresIn: "1d" })
+            return res.send({ accessToken: token })
+        })
+
+
         // confirm booking 
-        app.post("/booking", async(req,res)=>{
+        app.post("/booking", async (req, res) => {
             const bookData = req.body;
             const booking = await bookingCollection.insertOne(bookData)
             res.send(booking)
         })
 
         // get specific user
-        app.get("/user/:email", async(req, res)=>{
+        app.get("/user/:email", async (req, res) => {
             const email = req.params.email;
-            const query = {email: email}
+            const query = { email: email }
             const user = await usersCollection.findOne(query)
             res.send(user)
         })
 
         // get booking data for specific user
-        app.get("/bookings", async(req, res)=>{
+        app.get("/bookings", async (req, res) => {
 
             const email = req.query.email;
-            const query = {userEmail: email}
+            const query = { userEmail: email }
             const bookings = await bookingCollection.find(query).toArray()
             res.send(bookings)
 
         })
 
         // add product by post method
-        app.post("/addProduct", async(req,res)=>{
+        app.post("/addProduct", async (req, res) => {
             const product = req.body;
             const result = await productsCollection.insertOne(product)
             res.send(result)
         })
 
         // get seller my product 
-        app.get("/my-product", async(req, res)=>{
+        app.get("/my-product", async (req, res) => {
             const email = req.query.email;
-            const query = {seller_email: email}
+            const query = { seller_email: email }
             const myProducts = await productsCollection.find(query).toArray()
             res.send(myProducts)
         })
 
         // get all seller and buyer account
-        app.get("/myUsers", async(req, res)=>{
+        app.get("/myUsers", async (req, res) => {
             const userRole = req.query.userRole;
-            const query = {userRole: userRole}
+            const query = { userRole: userRole }
             const seller = await usersCollection.find(query).toArray()
             res.send(seller)
         })
 
         // delete method for deleting buyer and seller
-        app.delete("/deleteAPerson/:id", async(req, res)=>{
+        app.delete("/deleteAPerson/:id", async (req, res) => {
             const id = req.params.id;
-            const query = {_id: ObjectId(id)}
+            const query = { _id: ObjectId(id) }
             const deleteUser = await usersCollection.deleteOne(query);
             res.send(deleteUser)
         })
