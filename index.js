@@ -182,6 +182,13 @@ async function run() {
             res.send(result)
         })
 
+        // get method for getting wishlist item 
+        app.get("/myWishlist",  verifyJwt, async(req, res)=>{
+            const email = req.query.email;
+            const query = {wishlistAuthor: email}
+            const wishlists = await wishListsCollection.find(query).toArray();
+            res.send(wishlists)
+        })
         
 
     }
