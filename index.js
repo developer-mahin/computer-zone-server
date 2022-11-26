@@ -34,15 +34,26 @@ function verifyJwt(req, res, next) {
 }
 
 async function run() {
-    const usersCollection = client.db("computer-zone").collection("users")
-    const categoriesCollection = client.db("computer-zone").collection("categories")
-    const productsCollection = client.db("computer-zone").collection("products")
-    const bookingCollection = client.db("computer-zone").collection("bookings")
-    const advertisesCollection = client.db("computer-zone").collection("advertises")
-    const wishListsCollection = client.db("computer-zone").collection("wishlists")
 
 
     try {
+        const usersCollection = client.db("computer-zone").collection("users")
+        const categoriesCollection = client.db("computer-zone").collection("categories")
+        const productsCollection = client.db("computer-zone").collection("products")
+        const bookingCollection = client.db("computer-zone").collection("bookings")
+        const advertisesCollection = client.db("computer-zone").collection("advertises")
+        const wishListsCollection = client.db("computer-zone").collection("wishlists")
+
+
+        const verifyAdmin = async (req, res, next) => {
+            const decodedEmail = req.decoded.email
+            const query = { email: decodedEmail }
+            const user = await usersCollection.findOne(query)
+            if (user?.userRole !== "admin") {
+                return res.status(403).send({ message: "Forbidden access" })
+            }
+            next()
+        }
 
         // save user in the database
         app.post("/users", async (req, res) => {
@@ -85,9 +96,10 @@ async function run() {
 
 
         // stripe
-        app.post("/create-payment-intent", async (req, res) => {
-            const booking = req.body;
-            const price = booking.price;
+        app.post("/create-payment-intent", verifyJwt, async (req, res) => {
+            const paymentInfo = req.body;
+            // console.log(paymentInfo.itemPrice);
+            const price = paymentInfo.itemPrice;
             const totalAmount = price * 100;
 
             const paymentIntent = await stripe.paymentIntents.create({
@@ -97,10 +109,12 @@ async function run() {
                     "card"
                 ]
             });
-            res.send({
-                clientSecret: paymentIntent.client_secret,
-            });
+            console.log(paymentIntent.client_secret)
+            // res.send({
+            //     clientSecret: paymentIntent.client_secret,
+            // });
         })
+
 
         // confirm booking 
         app.post("/booking", async (req, res) => {
@@ -158,7 +172,7 @@ async function run() {
         })
 
         // get all seller and buyer account
-        app.get("/myUsers", verifyJwt, async (req, res) => {
+        app.get("/myUsers", verifyJwt, verifyAdmin, async (req, res) => {
             const userRole = req.query.userRole;
             const query = { userRole: userRole }
             const seller = await usersCollection.find(query).toArray()
@@ -216,6 +230,27 @@ async function run() {
             const wishlists = await wishListsCollection.find(query).toArray();
             res.send(wishlists)
         })
+
+
+        // this API protected for admin routes
+        app.get("/users/admin/:email", async (req, res) => {
+            const email = req.params.email
+            const query = { email }
+            const user = await usersCollection.findOne(query)
+            res.send({ isAdmin: user?.userRole === "admin" })
+        })
+
+        //this API protected for seller routes
+        app.get("/users/seller/:email", async (req, res) => {
+            const email = req.params.email
+            const query = { email }
+            const user = await usersCollection.findOne(query)
+            res.send({ isAdmin: user?.userRole === "seller" })
+        })
+
+
+
+
 
 
     }
