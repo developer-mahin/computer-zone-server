@@ -38,6 +38,8 @@ async function run() {
     const productsCollection = client.db("computer-zone").collection("products")
     const bookingCollection = client.db("computer-zone").collection("bookings")
     const advertisesCollection = client.db("computer-zone").collection("advertises")
+    const wishListsCollection = client.db("computer-zone").collection("wishlists")
+
 
     try {
 
@@ -165,6 +167,7 @@ async function run() {
             res.send(result)
         })
 
+        // get method for getting advertise in the home section
         app.get("/advertise", async (req, res) => {
             const status = req.query.status;
             const query = { status: status }
@@ -172,6 +175,14 @@ async function run() {
             res.send(advertises)
         })
 
+        // post method for add product in the wishlist 
+        app.post("/wishlist", verifyJwt, async(req, res)=>{
+            const wishlist = req.body;
+            const result = await wishListsCollection.insertOne(wishlist)
+            res.send(result)
+        })
+
+        
 
     }
     finally {
