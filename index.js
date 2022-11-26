@@ -4,6 +4,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const jwt = require('jsonwebtoken');
 const cors = require("cors");
 require("dotenv").config()
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 5000;
 
 
@@ -83,6 +84,24 @@ async function run() {
         })
 
 
+        // stripe
+        app.post("/create-payment-intent", async (req, res) => {
+            const booking = req.body;
+            const price = booking.price;
+            const totalAmount = price * 100;
+
+            const paymentIntent = await stripe.paymentIntents.create({
+                currency: "usd",
+                amount: totalAmount,
+                "payment-method-types": [
+                    "card"
+                ]
+            });
+            res.send({
+                clientSecret: paymentIntent.client_secret,
+            });
+        })
+
         // confirm booking 
         app.post("/booking", async (req, res) => {
             const bookData = req.body;
@@ -109,6 +128,14 @@ async function run() {
             const bookings = await bookingCollection.find(query).toArray()
             res.send(bookings)
 
+        })
+
+        // get booking by specific product id for payment option
+        app.get("/bookings/:id", async (req, res) => {
+            const id = req.params.id;
+            const query = { productId: id }
+            const result = await bookingCollection.findOne(query)
+            res.send(result)
         })
 
         // add product by post method
@@ -176,20 +203,20 @@ async function run() {
         })
 
         // post method for add product in the wishlist 
-        app.post("/wishlist", verifyJwt, async(req, res)=>{
+        app.post("/wishlist", verifyJwt, async (req, res) => {
             const wishlist = req.body;
             const result = await wishListsCollection.insertOne(wishlist)
             res.send(result)
         })
 
         // get method for getting wishlist item 
-        app.get("/myWishlist",  verifyJwt, async(req, res)=>{
+        app.get("/myWishlist", verifyJwt, async (req, res) => {
             const email = req.query.email;
-            const query = {wishlistAuthor: email}
+            const query = { wishlistAuthor: email }
             const wishlists = await wishListsCollection.find(query).toArray();
             res.send(wishlists)
         })
-        
+
 
     }
     finally {
