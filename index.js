@@ -43,7 +43,7 @@ async function run() {
         const bookingCollection = client.db("computer-zone").collection("bookings")
         const advertisesCollection = client.db("computer-zone").collection("advertises")
         const wishListsCollection = client.db("computer-zone").collection("wishlists")
-
+        const paymentsCollection = client.db("computer-zone").collection("payments")
 
         const verifyAdmin = async (req, res, next) => {
             const decodedEmail = req.decoded.email
@@ -95,26 +95,48 @@ async function run() {
         })
 
 
-        // stripe
-        app.post("/create-payment-intent", verifyJwt, async (req, res) => {
+        // stripe payment intent
+        app.post("/create-payment-intent", async (req, res) => {
             const paymentInfo = req.body;
-            // console.log(paymentInfo.itemPrice);
             const price = paymentInfo.itemPrice;
             const totalAmount = price * 100;
 
             const paymentIntent = await stripe.paymentIntents.create({
                 currency: "usd",
                 amount: totalAmount,
-                "payment-method-types": [
+                "payment_method_types": [
                     "card"
                 ]
             });
-            console.log(paymentIntent.client_secret)
-            // res.send({
-            //     clientSecret: paymentIntent.client_secret,
-            // });
+            res.send({
+                clientSecret: paymentIntent.client_secret,
+            });
         })
 
+        // store payment details and update product status and pay status
+        app.post("/payments", async (req, res) => {
+            const payment = req.body;
+            const result = await paymentsCollection.insertOne(payment)
+            const id = payment.bookingId
+            const filter = { _id: ObjectId(id) }
+            const updatedDoc = {
+                $set: {
+                    paid: true,
+                    transactionId: payment.transactionId
+                }
+            }
+            const result2 = await bookingCollection.updateOne(filter, updatedDoc)
+            const productId = payment.productId;
+            const filter2 = { _id: productId }
+            const updatedDoc2 = {
+                $set: {
+                    status: "Sold",
+                    transactionId: payment.transactionId
+                }
+            }
+            const result3 = await advertisesCollection.updateOne(filter2, updatedDoc2)
+            res.send(result)
+        })
 
         // confirm booking 
         app.post("/booking", async (req, res) => {
@@ -182,6 +204,7 @@ async function run() {
         // delete method for deleting buyer and seller
         app.delete("/deleteAPerson/:id", verifyJwt, async (req, res) => {
             const id = req.params.id;
+            console.log(id);
             const query = { _id: ObjectId(id) }
             const deleteUser = await usersCollection.deleteOne(query);
             res.send(deleteUser)
@@ -230,7 +253,6 @@ async function run() {
             const wishlists = await wishListsCollection.find(query).toArray();
             res.send(wishlists)
         })
-
 
         // this API protected for admin routes
         app.get("/users/admin/:email", async (req, res) => {
