@@ -134,6 +134,15 @@ async function run() {
                     transactionId: payment.transactionId
                 }
             }
+
+            const filter3 = { _id: ObjectId(productId) }
+            const updatedDoc3 = {
+                $set: {
+                    status: "Sold",
+                    transactionId: payment.transactionId
+                }
+            }
+            const result4 = await productsCollection.updateOne(filter3, updatedDoc3)
             const result3 = await advertisesCollection.updateOne(filter2, updatedDoc2)
             res.send(result)
         })
