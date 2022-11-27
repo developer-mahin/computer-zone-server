@@ -44,6 +44,7 @@ async function run() {
         const advertisesCollection = client.db("computer-zone").collection("advertises")
         const wishListsCollection = client.db("computer-zone").collection("wishlists")
         const paymentsCollection = client.db("computer-zone").collection("payments")
+        const reportItemsCollection = client.db("computer-zone").collection("reports")
 
         const verifyAdmin = async (req, res, next) => {
             const decodedEmail = req.decoded.email
@@ -219,7 +220,7 @@ async function run() {
             res.send(deleteUser)
         })
 
-        // patch method for change available to sold 
+        // patch method for change seller verification false to true 
         app.patch("/status/:id", verifyJwt, async (req, res) => {
             const id = req.params.id
             const status = req.body.status;
@@ -279,9 +280,31 @@ async function run() {
             res.send({ isAdmin: user?.userRole === "seller" })
         })
 
+        // this method for add reported item in the database
+        app.post("/report-item", verifyJwt, async (req, res) => {
+            const reportItem = req.body;
+            const result = await reportItemsCollection.insertOne(reportItem)
+            res.send(result)
+        })
 
+        // this method for get all reported items
+        app.get("/reported-items", verifyJwt, verifyAdmin, async (req, res) => {
+            const query = {}
+            const result = await reportItemsCollection.find(query).toArray()
+            res.send(result)
+        })
 
-
+        // delete reported item from any where
+        app.delete("/reportsItem/:id", async (req, res) => {
+            const id = req.params.id;
+            const reportedQuery = { productId: id }
+            const productsQuery = { _id: ObjectId(id) }
+            const advertiseQuery = { _id: id }
+            const deleteItem3 = await advertisesCollection.deleteOne(advertiseQuery)
+            const deleteItem2 = await productsCollection.deleteOne(productsQuery)
+            const deleteItem = await reportItemsCollection.deleteOne(reportedQuery)
+            res.send(deleteItem)
+        })
 
 
     }
