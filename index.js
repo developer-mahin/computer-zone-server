@@ -244,7 +244,7 @@ async function run() {
         })
 
         // get method for getting advertise in the home section
-        app.get("/advertise", async (req, res) => {
+        app.get("/advertise", verifyJwt, async (req, res) => {
             const status = req.query.status;
             const query = { status: status }
             const advertises = await advertisesCollection.find(query).toArray()
@@ -327,6 +327,15 @@ async function run() {
                     verify: true,
                 }
             }
+            const query3 = { seller_email: email }
+            const option3 = { upsert: true }
+            const updatedDoc3 = {
+                $set: {
+                    verify: true,
+                }
+            }
+
+            const result3 = await advertisesCollection.updateOne(query3, updatedDoc3, option3)
             const result2 = await productsCollection.updateOne(query2, updatedDoc2, option2)
             const result = await usersCollection.updateOne(query, updatedDoc, option)
             res.send(result)
