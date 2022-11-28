@@ -55,6 +55,7 @@ async function run() {
             if (user?.userRole !== "admin") {
                 return res.status(403).send({ message: "Forbidden access" })
             }
+
             next()
         }
 
@@ -158,7 +159,7 @@ async function run() {
         })
 
         // get specific user
-        app.get("/user/:email", async (req, res) => {
+        app.get("/user/:email", verifyJwt, async (req, res) => {
             const email = req.params.email;
             const query = { email: email }
             const user = await usersCollection.findOne(query)
