@@ -45,6 +45,8 @@ async function run() {
         const wishListsCollection = client.db("computer-zone").collection("wishlists")
         const paymentsCollection = client.db("computer-zone").collection("payments")
         const reportItemsCollection = client.db("computer-zone").collection("reports")
+        const blogsCollection = client.db("computer-zone").collection("blogs")
+
 
         const verifyAdmin = async (req, res, next) => {
             const decodedEmail = req.decoded.email
@@ -329,6 +331,25 @@ async function run() {
             const result = await usersCollection.updateOne(query, updatedDoc, option)
             res.send(result)
         })
+
+        // get all blogs
+        app.get("/blogs", async(req,res)=>{
+            const query = {}
+            const result = await blogsCollection.find(query).toArray()
+            res.send(result)
+        })
+
+        // get specific blog using id
+        app.get("/blogDetails/:id", async(req, res)=>{
+            const id = req.params.id;
+            const query = {_id: ObjectId(id)}
+            const result = await blogsCollection.findOne(query)
+            res.send(result)
+        })
+
+
+
+
 
     }
     finally {
