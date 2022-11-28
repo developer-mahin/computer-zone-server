@@ -295,7 +295,7 @@ async function run() {
         })
 
         // delete reported item from any where
-        app.delete("/reportsItem/:id", async (req, res) => {
+        app.delete("/reportsItem/:id", verifyJwt, verifyAdmin, async (req, res) => {
             const id = req.params.id;
             const reportedQuery = { productId: id }
             const productsQuery = { _id: ObjectId(id) }
@@ -306,6 +306,29 @@ async function run() {
             res.send(deleteItem)
         })
 
+        // method for verifying users 
+        app.patch("/verify-users/:email", verifyJwt, verifyAdmin, async (req, res) => {
+            const email = req.params.email;
+            const query = { email: email }
+            const option = { upsert: true }
+            const updatedDoc = {
+                $set: {
+                    verify: true,
+                    verifyStatus: "Verified"
+                }
+            }
+
+            const query2 = { seller_email: email }
+            const option2 = { upsert: true }
+            const updatedDoc2 = {
+                $set: {
+                    verify: true,
+                }
+            }
+            const result2 = await productsCollection.updateOne(query2, updatedDoc2, option2)
+            const result = await usersCollection.updateOne(query, updatedDoc, option)
+            res.send(result)
+        })
 
     }
     finally {
