@@ -357,7 +357,21 @@ async function run() {
             res.send(result)
         })
 
-
+        // advertise details page
+        app.get("/advertiseDetails/:id", async(req, res)=>{
+            const id = req.params.id
+            const query = {_id: id}
+            const result = await advertisesCollection.findOne(query)
+            res.send(result)
+        })
+        
+        // all product details query
+        app.get("/all_product_details/:id", async(req,res)=>{
+            const id = req.params.id
+            const query = {_id: ObjectId(id)}
+            const result = await productsCollection.findOne(query)
+            res.send(result)
+        })
 
 
 
