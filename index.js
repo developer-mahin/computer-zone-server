@@ -245,7 +245,7 @@ async function run() {
         })
 
         // get method for getting advertise in the home section
-        app.get("/advertise", verifyJwt, async (req, res) => {
+        app.get("/advertise", async (req, res) => {
             const status = req.query.status;
             const query = { status: status }
             const advertises = await advertisesCollection.find(query).toArray()
