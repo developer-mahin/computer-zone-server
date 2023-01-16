@@ -381,14 +381,13 @@ async function run() {
             res.send(result)
         })
 
+        // get method for getting particular product review
         app.get("/product-review", verifyJwt, async (req, res) => {
-            const id = req.query.id;
-            const query = { productId: id }
+            const reviewProductId = req.query.id;
+            const query = { productId: reviewProductId }
             const result = await reviewCollection.find(query).toArray()
             res.send(result)
         })
-
-
     }
     finally {
 
