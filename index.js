@@ -85,9 +85,13 @@ async function run() {
 
         // get all products
         app.get("/products", async (req, res) => {
+            const page = req.query.page;
+            const size = parseInt(req.query.size)
             const query = {}
-            const result = await productsCollection.find(query).toArray()
-            res.send(result)
+            const cursor = productsCollection.find(query)
+            const products = await cursor.skip(page*size).limit(size).toArray()
+            const count = await productsCollection.estimatedDocumentCount()
+            res.send({ count, products })
         })
 
         //get method for jwt token 
